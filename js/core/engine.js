@@ -96,7 +96,15 @@
     },
 
     resize() {
-      const vw = root.innerWidth, vh = root.innerHeight;
+      // Fit inside the page body's content box (so any page padding/gutters are respected).
+      let vw = root.innerWidth, vh = root.innerHeight;
+      const host = document.body;
+      if (host) {
+        const cs = root.getComputedStyle(host);
+        const w = host.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight);
+        const h = host.clientHeight - parseFloat(cs.paddingTop) - parseFloat(cs.paddingBottom);
+        if (w > 0 && h > 0) { vw = Math.min(vw, w); vh = Math.min(vh, h); }
+      }
       const fit = Math.min(vw / W, vh / H);
       const dpr = root.devicePixelRatio || 1;
       let s;
