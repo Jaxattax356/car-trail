@@ -178,7 +178,7 @@
       return;
     }
     const left = G.money - c.price;
-    const warn = left < 80000 ? U.wrap('Hank scratches his chin: "That only leaves you ' + U.money(left) + ' for gas and food. You sure about this?"', 48) : [];
+    const warn = left < 150000 ? U.wrap('Hank scratches his chin: "That only leaves you ' + U.money(left) + ' for gas and food. You sure about this?"', 48) : [];
     E.go(UI.yesNo({
       lines: U.wrap('Buy the ' + c.title + ' for ' + U.money(c.price) + '?', 48).concat(warn.length ? [''].concat(warn) : []),
       onYes: () => {

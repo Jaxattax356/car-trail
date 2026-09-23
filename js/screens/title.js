@@ -98,8 +98,13 @@
       inputDelay: 0.2,
       enter() {
         CT.sound.stopTune();
-        if (!CT.screens._titlePlayed && CT.sound.ok()) { CT.screens._titlePlayed = true; CT.sound.music('title'); }
+        s.wantMusic = true;
       },
+      // Browsers only allow audio after a user gesture, so start the tune as soon as sound unlocks.
+      update() {
+        if (s.wantMusic && CT.sound.ok()) { s.wantMusic = false; CT.sound.music('title'); }
+      },
+      exit() { CT.sound.stopTune(); },
       choose(i) {
         CT.sound.play('select');
         CT.sound.stopTune();
@@ -121,7 +126,6 @@
         else if (k === 'Enter' || k === ' ') s.choose(s.sel);
         else if (/^[1-4]$/.test(k)) s.choose(parseInt(k, 10) - 1);
         else if ((k === 'c' || k === 'C') && saved) s.resumeSave();
-        else if (k === 'm' || k === 'M') { if (CT.sound.ok()) CT.sound.music('title'); }
       },
       move(x, y) { const i = CT.art.title.hitButton(x, y); if (i >= 0) s.sel = i; },
       click(x, y) {

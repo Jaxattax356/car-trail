@@ -216,7 +216,7 @@
       lines: U.wrap('The overland trail ends here, but the Willamette Valley is still 100 miles away, on the far side of the Cascade Mountains. You must choose how to get there.', 48),
       options: [
         { label: 'drive the old Columbia River Highway', action: gorge },
-        { label: 'take the Barlow Road over Mount Hood (' + U.money(toll) + ')', disabled: G.money < toll, action: barlow },
+        { label: 'take the Barlow Road (' + U.money(toll) + ' toll)', disabled: G.money < toll, action: barlow },
         { label: 'find out about these options', action: dallesInfo },
         { label: 'go back', action: toMenu },
       ],

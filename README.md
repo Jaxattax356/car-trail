@@ -66,6 +66,7 @@ js/art/             procedural pixel art: cars, animals, scenes, travel strip, t
 js/screens/         title, setup, store, trail menu, travel, landmarks, ending
 js/minigames/       hunting, fishing, Columbia Gorge drive, roadside repair
 tests/sim-test.js   headless simulation fuzz + balance tests (node)
+tests/play-test.js  end-to-end browser playthrough (Playwright)
 tests/preview.html  art preview page
 ```
 
@@ -79,3 +80,13 @@ This runs hundreds of randomized games through every branch of the simulation,
 checking invariants after each step: no NaN, no negative supplies, gas within
 tank capacity, and the game always terminates. It then reports balance
 statistics for a sensible bot, per occupation and car.
+
+```
+node tests/play-test.js [seed] [occupation 1-3] [car 1-4] [month 1-5]
+```
+
+This is an end-to-end test in headless Chromium, using Playwright with a
+virtual clock. A bot plays two complete trips through the real UI: shopping,
+river crossings, breakdowns, all four mini-games, save and resume, roadside
+memorials, and the ending. The test fails on any JavaScript error or if the game
+ever gets stuck. Set `SHOTS=<dir>` to save a screenshot of every screen it visits.

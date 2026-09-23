@@ -97,9 +97,13 @@
 
     resize() {
       const vw = root.innerWidth, vh = root.innerHeight;
-      let s = Math.min(vw / W, vh / H);
-      if (s >= 2) s = Math.floor(s);
-      else if (s >= 1) s = Math.floor(s * 4) / 4;
+      const fit = Math.min(vw / W, vh / H);
+      const dpr = root.devicePixelRatio || 1;
+      let s;
+      if (fit >= 2) s = Math.floor(fit); // crisp whole-number scaling on big screens
+      else if (dpr >= 2) s = fit; // phones: fill the screen; uneven pixels are invisible at high DPI
+      else if (fit >= 1) s = Math.floor(fit * 4) / 4;
+      else s = fit;
       s = Math.max(0.5, s);
       this.canvas.style.width = Math.round(W * s) + 'px';
       this.canvas.style.height = Math.round(H * s) + 'px';
