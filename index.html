@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="description" content="The Car Trail - an Oregon Trail style road trip game: drive the old trail from Independence, Missouri to Oregon's Willamette Valley.">
+  <meta name="theme-color" content="#000000">
+  <title>The Car Trail</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="wrap">
+    <canvas id="screen" width="320" height="240" aria-label="The Car Trail game screen"></canvas>
+    <input id="textin" type="text" autocomplete="off" autocorrect="off" autocapitalize="words" spellcheck="false" maxlength="26" aria-label="Text entry">
+  </div>
+  <noscript>The Car Trail needs JavaScript to run.</noscript>
+
+  <script src="js/core/util.js"></script>
+  <script src="js/core/raster.js"></script>
+  <script src="js/core/font.js"></script>
+  <script src="js/core/audio.js"></script>
+  <script src="js/core/engine.js"></script>
+  <script src="js/core/ui.js"></script>
+
+  <script src="js/data/config.js"></script>
+  <script src="js/data/trail.js"></script>
+  <script src="js/game/sim.js"></script>
+
+  <script src="js/art/paint.js"></script>
+  <script src="js/art/cars.js"></script>
+  <script src="js/art/critters.js"></script>
+  <script src="js/art/scenes.js"></script>
+  <script src="js/art/travel.js"></script>
+  <script src="js/art/title.js"></script>
+  <script src="js/art/mapart.js"></script>
+
+  <script src="js/screens/common.js"></script>
+  <script src="js/screens/title.js"></script>
+  <script src="js/screens/setup.js"></script>
+  <script src="js/screens/store.js"></script>
+  <script src="js/screens/trail.js"></script>
+  <script src="js/screens/travel.js"></script>
+  <script src="js/screens/landmark.js"></script>
+  <script src="js/screens/end.js"></script>
+
+  <script src="js/minigames/hunting.js"></script>
+  <script src="js/minigames/fishing.js"></script>
+  <script src="js/minigames/roadrush.js"></script>
+  <script src="js/minigames/repair.js"></script>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

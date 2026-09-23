@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>Art preview</title>
+<style>body{background:#222;margin:0}canvas{image-rendering:pixelated;display:block}</style></head>
+<body>
+<canvas id="c" width="320" height="240"></canvas>
+<script src="../js/core/util.js"></script>
+<script src="../js/core/raster.js"></script>
+<script src="../js/core/font.js"></script>
+<script src="../js/art/paint.js"></script>
+<script src="../js/art/cars.js"></script>
+<script src="../js/art/critters.js"></script>
+<script src="../js/art/scenes.js"></script>
+<script src="../js/art/travel.js"></script>
+<script src="../js/data/config.js"></script>
+<script src="../js/data/trail.js"></script>
+<script src="../js/art/title.js"></script>
+<script src="../js/art/mapart.js"></script>
+<script>
+// Usage: preview.html?what=cars&scale=3
+window.PREVIEW = function (what, arg) {
+  const cv = document.getElementById('c');
+  const ctx = cv.getContext('2d');
+  ctx.imageSmoothingEnabled = false;
+  const fn = window.PREVIEWS[what];
+  const out = fn(ctx, cv, arg);
+  return out || 'ok';
+};
+window.PREVIEWS = {
+  title(ctx, cv, car) {
+    cv.width = 320; cv.height = 240;
+    ctx.drawImage(CT.art.title.get(car), 0, 0);
+    CT.art.title.drawButtons(ctx, 3);
+  },
+  map(ctx, cv) {
+    cv.width = 320; cv.height = 240;
+    ctx.fillStyle = '#000'; ctx.fillRect(0, 0, 320, 240);
+    const G = { visited: ['independence','kansas','bigblue','kearney','chimney','laramie'], node: 'laramie', next: 'indrock', atNode: false, segMiles: 190, segDone: 90 };
+    CT.art.map.draw(ctx, 8, 30, G, 0);
+  },
+  travel(ctx, cv, arg) {
+    const regs = arg === 'snow' ? ['plains','platte','wyoming','mountain','idaho','forest','oregon','hood'] : ['plains','platte','wyoming','mountain','idaho','forest','oregon','hood'];
+    cv.width = 640; cv.height = 112 * 4;
+    const cars = ['wagon','hatch','minivan','suv'];
+    regs.forEach((r, i) => CT.art.travel.draw(ctx, (i % 2) * 320, Math.floor(i / 2) * 112, { region: r, snow: arg === 'snow', scroll: 137 * i, frame: i, carId: cars[i % 4], moving: true, time: 0.4, weather: arg === 'snow' ? 'snow' : i === 5 ? 'rain' : 'none' }));
+  },
+  scene(ctx, cv, id) {
+    cv.width = 320; cv.height = 160;
+    ctx.drawImage(CT.art.scenes.get(id, { carId: ['wagon','hatch','minivan','suv'][id.length % 4], region: 'plains' }), 0, 0);
+  },
+  scenes4(ctx, cv, ids) {
+    const list = ids.split(',');
+    cv.width = 640; cv.height = 320;
+    list.forEach((id, i) => ctx.drawImage(CT.art.scenes.get(id, { carId: ['wagon','hatch','minivan','suv'][i % 4], region: id.startsWith('roadside') ? id.split(':')[1] : 'plains', name: 'Alex', lines: ['Died of', 'dysentery'] }), (i % 2) * 320, Math.floor(i / 2) * 160));
+  },
+  critters(ctx, cv) {
+    const { Bitmap } = CT.gfx; const A = CT.art.A; const C = CT.art.critters;
+    cv.width = 320; cv.height = 240;
+    const b = new Bitmap(320, 240);
+    A.grass(b, 0, 0, 320, 240, CT.U.rng(3), {});
+    ctx.drawImage(b.toCanvas(), 0, 0);
+    const types = Object.keys(C.SPECIES);
+    types.forEach((t, i) => {
+      for (let f = 0; f < 4; f++) { const a = C.animalCanvas(t, 1, f, false, false); ctx.drawImage(a.cv, 4 + f * 44, 4 + i * 30); }
+      const d = C.animalCanvas(t, 1, 0, true, false); ctx.drawImage(d.cv, 184, 4 + i * 30);
+      const s = C.animalCanvas(t, 0.6, 1, false, true); ctx.drawImage(s.cv, 232, 4 + i * 30);
+    });
+    Object.keys(C.FISH).forEach((t, i) => { const f = C.fishCanvas(t, 1); ctx.drawImage(f.cv, 262, 4 + i * 18); });
+    ctx.drawImage(C.tombstone('Alex', ['Died of', 'dysentery']).toCanvas(), 250, 150);
+  },
+  cars(ctx, cv) {
+    const { Bitmap } = CT.gfx; const A = CT.art.A;
+    cv.width = 320; cv.height = 240;
+    const b = new Bitmap(320, 240);
+    A.sky(b, 0, 120);
+    A.grass(b, 0, 120, 320, 120, CT.U.rng(3), {});
+    const ids = ['wagon', 'hatch', 'minivan', 'suv'];
+    ids.forEach((id, i) => CT.art.cars.drawTo(b, id, 10 + i * 75, 60, 1));
+    ids.forEach((id, i) => CT.art.cars.drawTo(b, id, 10 + (i % 2) * 150, 140 + Math.floor(i / 2) * 55, 2.5));
+    ctx.drawImage(b.toCanvas(), 0, 0);
+  },
+};
+</script>
+</body></html>
