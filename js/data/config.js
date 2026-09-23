@@ -58,8 +58,38 @@
       price: 500000, mpg: 16, tank: 24, cargo: 950, seats: 5, rel: 0.65, wade: 0.55, snow: 0.55, speed: 1.05, cond: 92,
       blurb: 'Tough, high off the ground and great in snow and floods. Thirsty.',
     },
+    g37: {
+      id: 'g37', name: 'G37 coupe', title: '2012 Infiniti G37 Coupe',
+      price: 550000, mpg: 19, tank: 20, cargo: 350, seats: 4, rel: 0.9, wade: 1.5, snow: 1.4, speed: 1.1, cond: 82,
+      blurb: 'The VQ V6 howls, but it\'s rear-drive, low, and someone rides on the hump.',
+    },
+    q50: {
+      id: 'q50', name: 'Q50', title: '2016 Infiniti Q50 3.0t',
+      price: 750000, mpg: 22, tank: 20, cargo: 480, seats: 5, rel: 0.8, wade: 1.5, snow: 1.15, speed: 1.1, cond: 86,
+      blurb: 'Twin-turbo V6 sport sedan. Comfy and quick, but it sits low for floods.',
+    },
+    s4: {
+      id: 's4', name: 'S4', title: '2014 Audi S4',
+      price: 800000, mpg: 21, tank: 16, cargo: 460, seats: 5, rel: 1.15, wade: 1.45, snow: 0.7, speed: 1.1, cond: 84,
+      blurb: 'Supercharged V6 and quattro AWD - great in snow. Parts are pricey.',
+    },
+    m3: {
+      id: 'm3', name: 'M3', title: '2016 BMW M3',
+      price: 1000000, mpg: 19, tank: 16, cargo: 440, seats: 5, rel: 1.15, wade: 1.55, snow: 1.45, speed: 1.15, cond: 85,
+      blurb: 'Twin-turbo inline-six track car. Fast, rear-drive and terrible in snow.',
+    },
+    m5: {
+      id: 'm5', name: 'M5', title: '2019 BMW M5',
+      price: 1100000, mpg: 17, tank: 18, cargo: 530, seats: 5, rel: 1.2, wade: 1.45, snow: 0.9, speed: 1.15, cond: 88,
+      blurb: '600 horsepower V8 super-sedan with AWD. Drinks gas like it\'s free.',
+    },
+    rs6: {
+      id: 'rs6', name: 'RS6 Avant', title: '2021 Audi RS6 Avant',
+      price: 1150000, mpg: 16, tank: 19, cargo: 760, seats: 5, rel: 1.05, wade: 1.15, snow: 0.6, speed: 1.15, cond: 90,
+      blurb: 'A 591 hp twin-turbo V8 wagon with quattro and air suspension. The dream.',
+    },
   };
-  CFG.carOrder = ['wagon', 'hatch', 'minivan', 'suv'];
+  CFG.carOrder = ['wagon', 'hatch', 'minivan', 'suv', 'g37', 'q50', 's4', 'm3', 'm5', 'rs6'];
 
   // Store items. `key` is the state field. Prices are per unit at Independence.
   CFG.items = [

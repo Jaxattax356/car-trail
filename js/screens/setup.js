@@ -132,7 +132,8 @@
   function dealership() {
     const G = CT.game.G;
     const s = UI.menu({
-      y: 116,
+      y: 115,
+      spacing: 10,
       intro: null,
       prompt: 'Which car would you like?',
       options: CFG.carOrder.map((id) => {

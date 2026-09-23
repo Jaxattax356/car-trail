@@ -77,6 +77,119 @@
       spare: [48.2, 9.2, 3.1],
       roof: 'basket',
     },
+    // ---------------- real-world models (low sedans / coupes / a wagon) ----------------
+    // Details: [x0, y0, x1, y1, colour] rectangles in design units (grilles, vents, exhausts...).
+    q50: {
+      trim: '#dde1e8', arch: 0.6,
+      len: 48,
+      body: [[1, 16.3], [0.4, 14.2], [0.5, 12.4], [1.8, 11.3], [8, 10.7], [13.5, 10.1], [16.2, 9.7], [20.4, 6.3], [23.4, 5.3], [30.6, 5.2], [34.2, 5.9], [39.2, 9.1], [46.4, 9.5], [47.6, 10.4], [47.7, 14.2], [47.1, 16.3]],
+      glass: [[17.2, 9.6], [20.9, 6.6], [23.5, 5.9], [30.6, 5.8], [33.7, 6.5], [37.6, 9.3]],
+      pillars: [27],
+      belt: 9.6,
+      wheels: [[9.6, 15.8, 4.1], [38.6, 15.8, 4.1]],
+      col: { body: '#e6e8ec', dark: '#aeb2ba', light: '#ffffff', deep: '#6c7078' },
+      doors: [27],
+      handles: [[23.8, 10.8], [32.2, 10.8]],
+      head: [0.7, 11.7, 4.2, 12.4],
+      tail: [44.6, 9.9, 47.5, 11],
+      bumpers: [],
+      details: [[0.2, 12.9, 1.4, 14.4, '#2a2a30'], [0.2, 13.4, 1.4, 13.8, '#9aa0a8'], [44.5, 15.2, 46.8, 15.9, '#2a2a30'], [42.4, 15.3, 44, 15.8, '#c0c4cc']],
+      rim: { color: '#c4c8d0', spokes: 5, caliper: '#34343c' },
+      sideLine: 11.9,
+    },
+    g37: {
+      trim: '#dde1e8', arch: 0.6,
+      len: 47,
+      body: [[1, 16.3], [0.4, 14.2], [0.5, 12.4], [1.8, 11.4], [9, 10.8], [14, 10.2], [17, 9.7], [21.6, 6.2], [24.8, 5.3], [30.4, 5.4], [33.8, 6.5], [39.4, 9.3], [45.6, 9.7], [46.6, 10.6], [46.7, 14.2], [46.1, 16.3]],
+      glass: [[18, 9.6], [22.2, 6.5], [24.9, 5.9], [30.3, 6], [33, 6.9], [36.6, 9.4]],
+      pillars: [31.4],
+      belt: 9.6,
+      wheels: [[9.4, 15.8, 4.1], [37.8, 15.8, 4.1]],
+      col: { body: '#26262e', dark: '#141418', light: '#6c7080', deep: '#0a0a0e' },
+      doors: [30.2],
+      handles: [[27, 10.8]],
+      head: [0.7, 11.8, 4.4, 12.5],
+      tail: [44, 10, 46.5, 11.1],
+      bumpers: [],
+      details: [[0.2, 13, 1.3, 14.4, '#101014'], [43.5, 15.2, 45, 15.9, '#c0c4cc'], [45.2, 15.2, 46.2, 15.9, '#c0c4cc']],
+      rim: { color: '#b8bcc4', spokes: 6, caliper: '#34343c' },
+      sideLine: 12,
+    },
+    m3: {
+      trim: '#101014', blackPillars: true, arch: 0.5,
+      len: 48,
+      body: [[1, 16.3], [0.3, 13.9], [0.4, 11.9], [1.6, 11], [8, 10.5], [13.8, 10], [17.2, 9.6], [21.2, 6.2], [24, 5.3], [32, 5.3], [35.4, 6.3], [39.6, 9.1], [46.4, 9.4], [47.6, 10.3], [47.7, 14.2], [47.1, 16.3]],
+      glass: [[18.1, 9.5], [21.7, 6.5], [24.1, 5.9], [32, 5.9], [34.8, 6.6], [36.1, 7.6], [36.3, 8.6], [37.9, 9.3]],
+      pillars: [28.6],
+      belt: 9.5,
+      wheels: [[9.4, 15.8, 4.2], [38.4, 15.8, 4.2]],
+      col: { body: '#2c6fd0', dark: '#1a4a94', light: '#78aaf0', deep: '#0e2c60' },
+      doors: [28.6],
+      handles: [[25.4, 10.7], [33.6, 10.7]],
+      head: [0.5, 11.4, 3.6, 12.3],
+      tail: [44.8, 9.8, 47.5, 10.9],
+      bumpers: [],
+      details: [[0.1, 12.4, 1.1, 13.4, '#141418'], [14.4, 11.3, 16.4, 12, '#141418'], [14.6, 11.5, 16.2, 11.8, '#c0c4cc'], [41.8, 15.2, 43.2, 15.9, '#c8ccd4'], [43.6, 15.2, 45, 15.9, '#c8ccd4'], [45.4, 15.1, 47.4, 16.1, '#1c1c22'], [44.2, 9.1, 47, 9.5, '#1a4a94']],
+      rim: { color: '#3a3c44', spokes: 5, caliper: '#2050c8', dark: true },
+      sideLine: 12.2,
+    },
+    m5: {
+      trim: '#101014', blackPillars: true, arch: 0.5,
+      len: 50,
+      body: [[1, 16.3], [0.3, 13.9], [0.4, 11.8], [1.6, 10.8], [9, 10.3], [14.6, 9.8], [18.2, 9.4], [22.4, 6], [25.2, 5.1], [34.2, 5.1], [37.6, 6.1], [42, 8.9], [48.4, 9.2], [49.6, 10.1], [49.7, 14.2], [49.1, 16.3]],
+      glass: [[19.1, 9.3], [22.9, 6.3], [25.3, 5.7], [34.2, 5.7], [37, 6.4], [38.4, 7.4], [38.6, 8.4], [40.3, 9.1]],
+      pillars: [30],
+      belt: 9.3,
+      wheels: [[10, 15.8, 4.3], [40.6, 15.8, 4.3]],
+      col: { body: '#6c7078', dark: '#484c54', light: '#a4a8b0', deep: '#2c2e34' },
+      doors: [30],
+      handles: [[26.8, 10.5], [35.8, 10.5]],
+      head: [0.5, 11.3, 3.8, 12.1],
+      tail: [46.6, 9.6, 49.5, 10.7],
+      bumpers: [],
+      details: [[0.1, 12.2, 1.1, 13.4, '#141418'], [15.2, 11.1, 17.2, 11.8, '#141418'], [15.4, 11.3, 17, 11.6, '#c0c4cc'], [43.6, 15.2, 45, 15.9, '#c8ccd4'], [45.4, 15.2, 46.8, 15.9, '#c8ccd4'], [47.2, 15.1, 49.4, 16.1, '#1c1c22']],
+      rim: { color: '#2a2c32', spokes: 5, caliper: '#2050c8', dark: true },
+      sideLine: 12,
+    },
+    s4: {
+      trim: '#c8ccd4', blackPillars: true, arch: 0.6,
+      len: 47,
+      body: [[1, 16.3], [0.4, 14.1], [0.4, 12.1], [1.8, 11], [8, 10.6], [12.8, 10.1], [16, 9.6], [20.4, 6.1], [23.5, 5.2], [31.4, 5.3], [34.8, 6.2], [38.8, 9.2], [45.4, 9.5], [46.6, 10.4], [46.7, 14.2], [46.1, 16.3]],
+      glass: [[17, 9.5], [21, 6.4], [23.6, 5.8], [31.4, 5.9], [34.2, 6.6], [37.3, 9.3]],
+      pillars: [27.2],
+      belt: 9.5,
+      wheels: [[9.4, 15.8, 4.1], [37.6, 15.8, 4.1]],
+      col: { body: '#b8161c', dark: '#7c0c10', light: '#e85054', deep: '#4c0608' },
+      doors: [27.2],
+      handles: [[23.6, 10.7], [31.8, 10.7]],
+      head: [0.6, 11.4, 3.8, 12.2],
+      tail: [43.8, 9.8, 46.5, 10.9],
+      bumpers: [],
+      details: [[0.1, 12.3, 1.2, 14.8, '#18181c'], [0.2, 12.4, 1.0, 12.7, '#9aa0a8'], [3.2, 11.8, 5.2, 12, '#e8eef4'], [41.6, 15.2, 42.9, 15.9, '#c8ccd4'], [43.2, 15.2, 44.5, 15.9, '#c8ccd4'], [3, 16, 44, 16.3, '#bcc0c8']],
+      rim: { color: '#c8ccd4', spokes: 5, caliper: '#c01818' },
+      sideLine: 11.6,
+      mirrorColor: '#c8ccd4',
+    },
+    rs6: {
+      trim: '#101014', blackPillars: true, arch: 0.45,
+      len: 50,
+      body: [[1, 16.3], [0.3, 13.9], [0.4, 11.7], [1.8, 10.6], [9, 10.1], [14.2, 9.7], [17.6, 9.2], [22, 5.9], [25, 5], [42.2, 5.2], [46.4, 6.5], [48.9, 9.2], [49.6, 10.2], [49.7, 14.2], [49.1, 16.3]],
+      glass: [[18.6, 9.1], [22.6, 6.2], [25.1, 5.6], [41.8, 5.8], [44.8, 6.9], [46.6, 9.1]],
+      pillars: [29.6, 38.4],
+      belt: 9.1,
+      wheels: [[10.2, 15.8, 4.4], [40.4, 15.8, 4.4]],
+      col: { body: '#8c9094', dark: '#62666a', light: '#bcc0c4', deep: '#3c4044' },
+      doors: [29.6, 38.4],
+      handles: [[26.2, 10.4], [35.2, 10.4]],
+      head: [0.5, 11.2, 4, 12],
+      tail: [46.8, 9.6, 49.5, 10.6],
+      bumpers: [],
+      details: [[0.1, 12.2, 1.3, 14.8, '#101014'], [0.2, 12.4, 1.1, 12.6, '#3c3c44'], [44.4, 15.1, 46.4, 16, '#1a1a1e'], [44.7, 15.3, 46.1, 15.8, '#9aa0a8'], [46.8, 15.1, 48.8, 16, '#1a1a1e'], [47.1, 15.3, 48.5, 15.8, '#9aa0a8'], [3, 16, 46, 16.3, '#2a2a30']],
+      rails: [24, 44, 4.8],
+      rim: { color: '#1e1e24', spokes: 10, caliper: '#c01818', dark: true },
+      sideLine: 11.4,
+      mirrorColor: '#2a2a30',
+    },
   };
 
   function scalePts(pts, s, ox, oy) {
@@ -102,7 +215,7 @@
     body.poly(scalePts(d.body, s, ox, oy));
     const well = new Mask(W, H);
     d.wheels.forEach((w) => {
-      const cx = X(w[0]), cy = Y(w[1]), r = (w[2] + 1.1) * s;
+      const cx = X(w[0]), cy = Y(w[1]), r = (w[2] + (d.arch == null ? 1.1 : d.arch)) * s;
       well.disc(cx, cy, r);
       body.disc(cx, cy, r, 0);
     });
@@ -157,13 +270,13 @@
     for (let y = glass.y0; y <= glass.y1; y++) for (let x = glass.x0; x <= glass.x1; x++) if (glass.has(x, y)) union.set(x, y);
     // window frame line
     for (let y = glass.y0; y <= glass.y1; y++) for (let x = glass.x0; x <= glass.x1; x++) {
-      if (glass.has(x, y) && (!glass.has(x, y - 1) || !glass.has(x - 1, y) || !glass.has(x + 1, y))) b.pset(x, y, col.deep);
+      if (glass.has(x, y) && (!glass.has(x, y - 1) || !glass.has(x - 1, y) || !glass.has(x + 1, y))) b.pset(x, y, d.trim || col.deep);
     }
     // pillars
     const pw = Math.max(1, Math.round(0.9 * s));
     d.pillars.forEach((px) => {
       const x = Math.round(X(px));
-      for (let y = glass.y0; y <= glass.y1; y++) for (let k = 0; k < pw; k++) if (glass.has(x + k, y)) b.pset(x + k, y, k === pw - 1 && pw > 1 ? col.dark : col.body);
+      for (let y = glass.y0; y <= glass.y1; y++) for (let k = 0; k < pw; k++) if (glass.has(x + k, y)) b.pset(x + k, y, d.blackPillars ? '#141418' : k === pw - 1 && pw > 1 ? col.dark : col.body);
     });
 
     // --- doors, handles, trim ---
@@ -194,12 +307,28 @@
       bm.rect(Math.round(X(r[0])), Math.round(Y(r[1])), Math.max(1, Math.round((r[2] - r[0]) * s)), Math.max(1, Math.round((r[3] - r[1]) * s)));
       for (let y = bm.y0; y <= bm.y1; y++) for (let x = bm.x0; x <= bm.x1; x++) if (bm.has(x, y)) union.set(x, y);
     });
+    // sculpted shoulder/character line
+    if (d.sideLine) {
+      const y = Math.round(Y(d.sideLine));
+      for (let x = Math.round(X(3)); x < Math.round(X(d.len - 2)); x++) if (body.has(x, y) && !wellShadow.has(x, y)) b.pset(x, y, col.light);
+    }
+    (d.details || []).forEach((r) => {
+      rectD(r, r[4]);
+      const dm = new Mask(W, H);
+      dm.rect(Math.round(X(r[0])), Math.round(Y(r[1])), Math.max(1, Math.round((r[2] - r[0]) * s)), Math.max(1, Math.round((r[3] - r[1]) * s)));
+      for (let y = dm.y0; y <= dm.y1; y++) for (let x = dm.x0; x <= dm.x1; x++) if (dm.has(x, y)) union.set(x, y);
+    });
+    if (d.rails) {
+      const ry = Math.round(Y(d.rails[2]));
+      b.hline(Math.round(X(d.rails[0])), Math.round(X(d.rails[1])), ry, '#1c1c22');
+      for (let x = Math.round(X(d.rails[0])); x <= Math.round(X(d.rails[1])); x++) union.set(x, ry);
+    }
     rectD(d.head, '#fff8b0');
     b.pset(Math.round(X(d.head[0])), Math.round(Y(d.head[1])), P.white);
     rectD(d.tail, '#e02828');
     // mirror
     const mx = Math.round(X(d.glass[0][0] + 0.2)), my = Math.round(Y(d.belt - 1.2));
-    b.rect(mx - Math.max(1, Math.round(s)), my, Math.max(2, Math.round(1.6 * s)), Math.max(1, Math.round(1.1 * s)), col.deep);
+    b.rect(mx - Math.max(1, Math.round(s)), my, Math.max(2, Math.round(1.6 * s)), Math.max(1, Math.round(1.1 * s)), d.mirrorColor || col.deep);
 
     // --- roof cargo ---
     const cargo = new Mask(W, H);
@@ -258,9 +387,39 @@
       bmp: b,
       ox, oy, s,
       wheels: d.wheels.map((w) => ({ x: X(w[0]), y: Y(w[1]), r: w[2] * s })),
+      rim: d.rim || null,
       ground: Y(groundD),
       len: d.len,
     };
+  }
+
+  // Big alloy wheel: thin tire sidewall, spoked rim, brake caliper peeking through.
+  function renderSportWheel(r, frame, rim) {
+    const size = Math.ceil(r * 2) + 3;
+    const b = new Bitmap(size, size);
+    const c = size / 2;
+    const m = new Mask(size, size);
+    m.disc(c, c, r + 0.4);
+    b.paint(m, '#16161a');
+    b.outline(m, OUT);
+    const rr = Math.max(1.6, r * 0.72);
+    const face = new Mask(size, size);
+    face.disc(c, c, rr);
+    const light = rim.dark ? '#5c5e68' : '#eef0f4';
+    b.paint(face, (x, y) => (Math.hypot(x - c + 0.5, y - c + 0.5) > rr - 0.9 ? (x + y < c * 2 ? light : rim.color) : '#202026'));
+    if (rim.caliper && rr >= 3) b.rect(Math.round(c - rr * 0.75), Math.round(c - rr * 0.55), Math.max(1, Math.round(rr * 0.4)), Math.max(2, Math.round(rr * 0.8)), rim.caliper);
+    const n = rim.spokes || 5;
+    const a0 = (frame % 4) * ((Math.PI * 2) / n / 4);
+    for (let k = 0; k < n; k++) {
+      const a = a0 + (k * Math.PI * 2) / n;
+      for (let t = 0.2; t <= 1; t += 0.12) {
+        const x = Math.floor(c + Math.cos(a) * rr * t * 0.92), y = Math.floor(c + Math.sin(a) * rr * t * 0.92);
+        b.pset(x, y, Math.sin(a) < -0.2 ? light : rim.color);
+      }
+    }
+    b.disc(c, c, Math.max(0.8, rr * 0.28), rim.color);
+    b.pset(Math.floor(c), Math.floor(c), '#9aa0a8');
+    return b;
   }
 
   // Wheel sprite (tire + hub) with a rotation frame 0..3.
@@ -299,10 +458,10 @@
     if (!v) { v = renderBody(id, s, colors); cache.set(k, v); }
     return v;
   }
-  function wheel(r, frame) {
-    const k = 'w|' + r + '|' + frame;
+  function wheel(r, frame, rim) {
+    const k = 'w|' + r + '|' + frame + '|' + (rim ? JSON.stringify(rim) : '');
     let v = cache.get(k);
-    if (!v) { v = renderWheel(r, frame); cache.set(k, v); }
+    if (!v) { v = rim ? renderSportWheel(r, frame, rim) : renderWheel(r, frame); cache.set(k, v); }
     return v;
   }
 
@@ -321,7 +480,7 @@
     }
     bmp.draw(c.bmp, dx, dy, o.flip);
     c.wheels.forEach((w) => {
-      const wb = wheel(w.r, o.frame || 0);
+      const wb = wheel(w.r, o.frame || 0, c.rim);
       let wx = dx + w.x - wb.w / 2;
       if (o.flip) wx = dx + (c.bmp.w - w.x) - wb.w / 2;
       bmp.draw(wb, Math.round(wx), Math.round(dy + w.y - wb.h / 2));
@@ -343,7 +502,7 @@
     const dy = Math.round(gy - c.ground + (o.bounce || 0));
     ctx.drawImage(bodyCv, Math.round(x), dy);
     c.wheels.forEach((w) => {
-      const wcv = toCanvas('w|' + w.r + '|' + (frame % 4), () => wheel(w.r, frame % 4));
+      const wcv = toCanvas('w|' + w.r + '|' + (frame % 4) + '|' + id, () => wheel(w.r, frame % 4, c.rim));
       ctx.drawImage(wcv, Math.round(x + w.x - wcv.width / 2), Math.round(gy - c.ground + w.y - wcv.height / 2));
     });
     return { w: c.bmp.w, h: c.bmp.h };
@@ -363,9 +522,15 @@
     sedan: { w: 10, h: 19, roof: [6, 13] },
     truck: { w: 14, h: 34, roof: [0, 6], trailer: true },
     rv: { w: 14, h: 30, roof: [0, 26] },
+    q50: { w: 10, h: 20, roof: [7, 14] },
+    g37: { w: 10, h: 19, roof: [7, 13] },
+    m3: { w: 10, h: 20, roof: [7, 14] },
+    m5: { w: 11, h: 21, roof: [7, 15] },
+    s4: { w: 10, h: 20, roof: [7, 14] },
+    rs6: { w: 11, h: 21, roof: [6, 18], rack: true },
   };
   function renderTop(type, color, dark, light, flipY) {
-    const t = TOP[type];
+    const t = TOP[type] || TOP.sedan;
     const b = new Bitmap(t.w + 2, t.h + 2);
     const m = new Mask(b.w, b.h);
     m.rect(1, 2, t.w, t.h - 2);
@@ -411,7 +576,7 @@
     };
     return toCanvas('top|' + type + '|' + color + '|' + !!flipY, () => renderTop(type, color, shade(color, 0.6), shade(color, 1.25), flipY));
   }
-  function topSize(type) { const t = TOP[type]; return { w: t.w + 2, h: t.h + 2 }; }
+  function topSize(type) { const t = TOP[type] || TOP.sedan; return { w: t.w + 2, h: t.h + 2 }; }
 
   CT.art.cars = { DESIGNS, drawTo, drawCtx, size, body, wheel, topCanvas, topSize, colorOf: (id) => DESIGNS[id].col.body };
 })(typeof window !== 'undefined' ? window : globalThis);

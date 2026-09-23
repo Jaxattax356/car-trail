@@ -67,6 +67,18 @@ window.PREVIEWS = {
     Object.keys(C.FISH).forEach((t, i) => { const f = C.fishCanvas(t, 1); ctx.drawImage(f.cv, 262, 4 + i * 18); });
     ctx.drawImage(C.tombstone('Alex', ['Died of', 'dysentery']).toCanvas(), 250, 150);
   },
+  newcars(ctx, cv) {
+    const { Bitmap } = CT.gfx; const A = CT.art.A;
+    cv.width = 320; cv.height = 240;
+    const b = new Bitmap(320, 240);
+    A.sky(b, 0, 120);
+    A.grass(b, 0, 120, 320, 120, CT.U.rng(3), {});
+    const ids = ['q50', 'g37', 'm3', 'm5', 's4', 'rs6'];
+    ids.forEach((id, i) => CT.art.cars.drawTo(b, id, 4 + (i % 2) * 160, 50 + Math.floor(i / 2) * 44, 2.8));
+    ids.forEach((id, i) => CT.art.cars.drawTo(b, id, 4 + i * 53, 234, 1));
+    ctx.drawImage(b.toCanvas(), 0, 0);
+    ids.forEach((id, i) => ctx.drawImage(CT.art.cars.topCanvas(id, CT.art.cars.colorOf(id)), 300, 4 + i * 26));
+  },
   cars(ctx, cv) {
     const { Bitmap } = CT.gfx; const A = CT.art.A;
     cv.width = 320; cv.height = 240;

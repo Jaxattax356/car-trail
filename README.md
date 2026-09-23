@@ -25,8 +25,11 @@ Classic Oregon Trail mechanics, adapted for cars:
 - **Occupations**: software engineer (most money), auto mechanic (2x points,
   better repairs) and college student (3x points, hardy on small meals).
 - **Your car replaces the oxen**: a station wagon, hybrid hatchback, minivan or
-  4x4 SUV. Each has different mpg, tank size, trunk space, reliability and
-  ground clearance.
+  4x4 SUV, or a real-world performance car: Infiniti G37 Coupe, Infiniti Q50,
+  Audi S4, BMW M3, BMW M5 or Audi RS6 Avant, each drawn from its real-life
+  shape, color, wheels and trim. Each car has different mpg, tank size, trunk
+  space, reliability, snow handling (rear-drive vs. quattro/AWD) and ground
+  clearance.
 - **Supplies**: gas, gas cans, food, warm clothing, ammunition, spare tires,
   batteries and fan belts. Prices rise the farther west you go.
 - **Pace and rations**: steady, strenuous or grueling; filling, meager or bare bones.
